@@ -1,0 +1,111 @@
+extends layout
+
+block content
+    script(type="text/javascript").
+        var test = function(e) {
+            console.log("wow")
+        }
+    h1 Welcome to the survey!
+    form(name="friendForm")
+        h2 Input your name
+            input(type="text", value = "test", required)
+        h2 Put a link to your photo
+            input(type="text", value = "test", required)
+        h2 This is the first question
+            br
+            select(required)
+                //- option
+                option(value="1") 1 - Strongly Disagree
+                option(value="2") 2 - Moderately Disagree
+                option(value="3") 3 - Somewhere in the middle
+                option(value="4") 4 - Moderately Agree
+                option(value="5") 5 - Strongly Agree
+        h2 This is the second question
+            br
+            select(required)
+                //- option
+                option(value="1") 1 - Strongly Disagree
+                option(value="2") 2 - Moderately Disagree
+                option(value="3") 3 - Somewhere in the middle
+                option(value="4") 4 - Moderately Agree
+                option(value="5") 5 - Strongly Agree
+        h2 This is the third question
+            br
+            select(required)
+                //- option
+                option(value="1") 1 - Strongly Disagree
+                option(value="2") 2 - Moderately Disagree
+                option(value="3") 3 - Somewhere in the middle
+                option(value="4") 4 - Moderately Agree
+                option(value="5") 5 - Strongly Agree
+        h2 This is the fourth question
+            br
+            select(required)
+                //- option
+                option(value="1") 1 - Strongly Disagree
+                option(value="2") 2 - Moderately Disagree
+                option(value="3") 3 - Somewhere in the middle
+                option(value="4") 4 - Moderately Agree
+                option(value="5") 5 - Strongly Agree
+        h2 This is the fifth question
+            br
+            select(required)
+                //- option
+                option(value="1") 1 - Strongly Disagree
+                option(value="2") 2 - Moderately Disagree
+                option(value="3") 3 - Somewhere in the middle
+                option(value="4") 4 - Moderately Agree
+                option(value="5") 5 - Strongly Agree
+        h2 This is the sixth question
+            br
+            select(required)
+                //- option
+                option(value="1") 1 - Strongly Disagree
+                option(value="2") 2 - Moderately Disagree
+                option(value="3") 3 - Somewhere in the middle
+                option(value="4") 4 - Moderately Agree
+                option(value="5") 5 - Strongly Agree
+        h2 This is the seventh question
+            br
+            select(required)
+                //- option
+                option(value="1") 1 - Strongly Disagree
+                option(value="2") 2 - Moderately Disagree
+                option(value="3") 3 - Somewhere in the middle
+                option(value="4") 4 - Moderately Agree
+                option(value="5") 5 - Strongly Agree
+        h2 This is the eigth question
+            br
+            select(required)
+                //- option
+                option(value="1") 1 - Strongly Disagree
+                option(value="2") 2 - Moderately Disagree
+                option(value="3") 3 - Somewhere in the middle
+                option(value="4") 4 - Moderately Agree
+                option(value="5") 5 - Strongly Agree
+        h2 This is the ninth question
+            br
+            select(required)
+                //- option
+                option(value="1") 1 - Strongly Disagree
+                option(value="2") 2 - Moderately Disagree
+                option(value="3") 3 - Somewhere in the middle
+                option(value="4") 4 - Moderately Agree
+                option(value="5") 5 - Strongly Agree
+        h2 This is the tenth question
+            br
+            select(required)
+                //- option
+                option(value="1") 1 - Strongly Disagree
+                option(value="2") 2 - Moderately Disagree
+                option(value="3") 3 - Somewhere in the middle
+                option(value="4") 4 - Moderately Agree
+                option(value="5") 5 - Strongly Agree
+        button#submit(type='button' onclick="test()") Find your match!
+    //- script(src="./app/data/friends.js")
+    //- script
+    //-     - var submit = "#Submit"
+    //-     - function test(e) 
+    //-       e.preventDefault
+    //-       console.log('wow')
+            

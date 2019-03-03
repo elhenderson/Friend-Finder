@@ -11,14 +11,12 @@ const PORT = process.env.PORT || 3000
 
 app.set('view engine', 'pug');
 
-const mainRoutes = require('./app/routing')
+const mainRoutes = require('./app/routing/htmlRoutes')
 
 app.use(mainRoutes);
-
-
-
-
 
 app.listen(PORT, () => {
     console.log('The application is running on localhost:3000!')
 });
+
+
