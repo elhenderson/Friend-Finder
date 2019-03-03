@@ -2,8 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/api/friends', (req, res) => {
-    req.get('friends')
+    res.render('home');
 })
+
+// router.post('/api/friends', (req, res) => {
+
+// })
 
 
 module.exports = 'router'

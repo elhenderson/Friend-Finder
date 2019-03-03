@@ -2,9 +2,7 @@ extends layout
 
 block content
     script(type="text/javascript").
-        var test = function(e) {
-            console.log("wow")
-        }
+        var test = function(e) {console.log("wow")}   
     h1 Welcome to the survey!
     form(name="friendForm")
         h2 Input your name
@@ -101,11 +99,4 @@ block content
                 option(value="3") 3 - Somewhere in the middle
                 option(value="4") 4 - Moderately Agree
                 option(value="5") 5 - Strongly Agree
-        button#submit(type='button' onclick="test()") Find your match!
-    //- script(src="./app/data/friends.js")
-    //- script
-    //-     - var submit = "#Submit"
-    //-     - function test(e) 
-    //-       e.preventDefault
-    //-       console.log('wow')
-            
+        button#submit(type='button' onclick="test()") Find your match!  
