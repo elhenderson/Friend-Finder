@@ -1,0 +1,28 @@
+{
+  "name": "Friend-Finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elhenderson/Friend-Finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elhenderson/Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/elhenderson/Friend-Finder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.10",
+    "path": "^0.12.7",
+    "pug": "^2.0.3"
+  }
+}
