@@ -7,6 +7,8 @@ const app = express();
 // app.use(bodyParser.urlencoded({ extended: false}));
 // app.use(cookieParser());
 
+const PORT = process.env.PORT || 3000
+
 app.set('view engine', 'pug');
 
 const mainRoutes = require('./app/routing')
@@ -17,6 +19,6 @@ app.use(mainRoutes);
 
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('The application is running on localhost:3000!')
 });
