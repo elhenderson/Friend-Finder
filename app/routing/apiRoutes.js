@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/api/friends', (req, res) => {
-    res.render('home');
+router.get('/', (req, res) => {
+    res.render('jsonData');
 })
 
 // router.post('/api/friends', (req, res) => {
@@ -10,4 +10,4 @@ router.get('/api/friends', (req, res) => {
 // })
 
 
-module.exports = 'router'
+module.exports = router;

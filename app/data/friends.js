@@ -1,5 +1,5 @@
-{
-    "data":{
+var friends = 
+    {
         "name": "Batman",
         "photo": "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Batman-BenAffleck.jpg/200px-Batman-BenAffleck.jpg",
         "scores": [
@@ -15,7 +15,9 @@
             1
         ]
     }
-}
 
 
 
+var friendsDisplay = JSON.stringify(friends);
+
+document.write(friendsDisplay);
