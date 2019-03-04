@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('jsonData');
+    res.send("hello");
 })
 
-// router.post('/api/friends', (req, res) => {
-
-// })
+router.post('/', (req, res) => {
+    console.log(req.body)
+    res.send("recieved your request");
+})
 
 
 module.exports = router;

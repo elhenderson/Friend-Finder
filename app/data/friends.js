@@ -18,6 +18,24 @@ var friends =
 
 
 
-var friendsDisplay = JSON.stringify(friends);
+// var friendsDisplay = JSON.stringify(friends);
 
-document.write(friendsDisplay);
+// document.write(friendsDisplay);
+
+
+var $form = $("#friendForm")
+
+const handleFormSubmit = (event, formArray) => {
+    event.preventDefault();
+//serialize data function
+
+    var returnArray = {};
+    for (let i = 0; i < formArray.length; i++){
+        returnArray[formArray[i]['name']] = formArray[i]['value'];
+    }
+    return returnArray;
+
+}
+
+
+
