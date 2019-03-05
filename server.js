@@ -5,6 +5,7 @@ const upload = multer();
 const path = require('path');
 
 
+
 const app = express();
 
 // app.use(bodyParser.urlencoded({ extended: false}));
@@ -21,7 +22,7 @@ const JSONRoutes = require('./app/routing/apiRoutes')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(upload.array());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname)));
 app.use(mainRoutes);
 app.use('/api/friends', JSONRoutes)
 

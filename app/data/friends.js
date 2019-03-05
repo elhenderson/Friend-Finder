@@ -1,4 +1,5 @@
 var friends = 
+[
     {
         "name": "Batman",
         "photo": "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Batman-BenAffleck.jpg/200px-Batman-BenAffleck.jpg",
@@ -15,7 +16,7 @@ var friends =
             1
         ]
     }
-
+]
 
 
 // var friendsDisplay = JSON.stringify(friends);
@@ -23,17 +24,17 @@ var friends =
 // document.write(friendsDisplay);
 
 
-var $form = $("#friendForm")
+// var $form = $("#friendForm")
 
 const handleFormSubmit = (event, formArray) => {
     event.preventDefault();
 //serialize data function
 
-    var returnArray = {};
-    for (let i = 0; i < formArray.length; i++){
-        returnArray[formArray[i]['name']] = formArray[i]['value'];
-    }
-    return returnArray;
+    // var returnArray = {};
+    // for (let i = 0; i < formArray.length; i++){
+    //     returnArray[formArray[i]['name']] = formArray[i]['value'];
+    // }
+    // return returnArray;
 
 }
 

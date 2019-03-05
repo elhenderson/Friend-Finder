@@ -1,8 +1,6 @@
 extends layout
 
 block content
-    script(type="text/javascript").
-
     h1 Welcome to the survey!
     form#friendForm(action="/api/friends", method="POST", name="friendForm")
         h2 Input your name
@@ -11,16 +9,16 @@ block content
             input(type="text", value = "test", name="photo", required)
         h2 This is the first question
             br
-            select(required, name="score")
+            select(required, name="score", type="number", step="1")
                 //- option
-                option(value="1") 1 - Strongly Disagree
+                option(value="1", type="number") 1 - Strongly Disagree
                 option(value="2") 2 - Moderately Disagree
                 option(value="3") 3 - Somewhere in the middle
                 option(value="4") 4 - Moderately Agree
                 option(value="5") 5 - Strongly Agree
         h2 This is the second question
             br
-            select(required, name="score")
+            select(required, name="scores")
                 //- option
                 option(value="1") 1 - Strongly Disagree
                 option(value="2") 2 - Moderately Disagree
@@ -29,7 +27,7 @@ block content
                 option(value="5") 5 - Strongly Agree
         h2 This is the third question
             br
-            select(required, name="score")
+            select(required, name="scores")
                 //- option
                 option(value="1") 1 - Strongly Disagree
                 option(value="2") 2 - Moderately Disagree
@@ -38,7 +36,7 @@ block content
                 option(value="5") 5 - Strongly Agree
         h2 This is the fourth question
             br
-            select(required, name="score")
+            select(required, name="scores")
                 //- option
                 option(value="1") 1 - Strongly Disagree
                 option(value="2") 2 - Moderately Disagree
@@ -47,7 +45,7 @@ block content
                 option(value="5") 5 - Strongly Agree
         h2 This is the fifth question
             br
-            select(required, name="score")
+            select(required, name="scores")
                 //- option
                 option(value="1") 1 - Strongly Disagree
                 option(value="2") 2 - Moderately Disagree
@@ -56,7 +54,7 @@ block content
                 option(value="5") 5 - Strongly Agree
         h2 This is the sixth question
             br
-            select(required, name="score")
+            select(required, name="scores")
                 //- option
                 option(value="1") 1 - Strongly Disagree
                 option(value="2") 2 - Moderately Disagree
@@ -65,7 +63,7 @@ block content
                 option(value="5") 5 - Strongly Agree
         h2 This is the seventh question
             br
-            select(required, name="score")
+            select(required, name="scores")
                 //- option
                 option(value="1") 1 - Strongly Disagree
                 option(value="2") 2 - Moderately Disagree
@@ -74,7 +72,7 @@ block content
                 option(value="5") 5 - Strongly Agree
         h2 This is the eigth question
             br
-            select(required, name="score")
+            select(required, name="scores")
                 //- option
                 option(value="1") 1 - Strongly Disagree
                 option(value="2") 2 - Moderately Disagree
@@ -83,7 +81,7 @@ block content
                 option(value="5") 5 - Strongly Agree
         h2 This is the ninth question
             br
-            select(required, name="score")
+            select(required, name="scores")
                 //- option
                 option(value="1") 1 - Strongly Disagree
                 option(value="2") 2 - Moderately Disagree
@@ -92,11 +90,11 @@ block content
                 option(value="5") 5 - Strongly Agree
         h2 This is the tenth question
             br
-            select(required, name="score")
+            select(required, name="scores")
                 //- option
                 option(value="1") 1 - Strongly Disagree
                 option(value="2") 2 - Moderately Disagree
                 option(value="3") 3 - Somewhere in the middle
                 option(value="4") 4 - Moderately Agree
                 option(value="5") 5 - Strongly Agree
-        button#submit(type='submit' onclick="handleFormSubmit(event, $form)" ) Find your match!  
+        button#submit(type='submit' ) Find your match!  
