@@ -29,11 +29,11 @@ const handleFormSubmit = (event, formArray) => {
     event.preventDefault();
 //serialize data function
 
-    var returnArray = {};
-    for (let i = 0; i < formArray.length; i++){
-        returnArray[formArray[i]['name']] = formArray[i]['value'];
-    }
-    return returnArray;
+    // var returnArray = {};
+    // for (let i = 0; i < formArray.length; i++){
+    //     returnArray[formArray[i]['name']] = formArray[i]['value'];
+    // }
+    // return returnArray;
 
 }
 
