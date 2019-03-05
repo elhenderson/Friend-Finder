@@ -11,7 +11,6 @@ router.get('/survey', (req, res) => {
 
 router.post('/', (req, res) => {
     res.render('survey');
-    console.log(req.body);
    res.send("recieved your request!");
 });
 

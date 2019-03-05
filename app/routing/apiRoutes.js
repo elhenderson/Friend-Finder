@@ -46,6 +46,28 @@ router.get('/', (req, res) => {
     return res.json(friends);
 })
 
+var friends = 
+[
+    {
+        "name": "Batman",
+        "photo": "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Batman-BenAffleck.jpg/200px-Batman-BenAffleck.jpg",
+        "scores": [
+            5,
+            1,
+            4,
+            4,
+            5,
+            1,
+            2,
+            5,
+            4,
+            1
+        ]
+    }
+]
+
+
+
 router.post('/', (req, res) => {
     let newFriend = req.body;
     let totalDifference = 0;
