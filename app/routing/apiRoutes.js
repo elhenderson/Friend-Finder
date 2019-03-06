@@ -1,10 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send("hello");
-})
-
 var friends = 
 [
     {
@@ -25,6 +21,11 @@ var friends =
     }
 ]
 
+
+
+router.get('/', (req, res) => {
+    res.json(friends);
+})
 
 
 router.post('/', (req, res) => {
