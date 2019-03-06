@@ -1,8 +1,17 @@
-extends layout
+doctype html
+html(lang="en")
+    head
+        title Document
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js")
+        
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous")  
 
-block content
-    h1 Welcome to the survey!
-    form#friendForm(action="/api/friends", method="POST")
+
+    body
+        
+        h1 Welcome to the survey!
+        
         h2 Input your name
             br
             input(type="text", value = "test", name="name", required)
@@ -11,7 +20,7 @@ block content
             input(type="text", value = "test", name="photo", required)
         h2 This is the first question
             br
-            select(required, name="scores")
+            select(required, name="q1")
                 //- option
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
@@ -20,7 +29,7 @@ block content
                 option(value=5) Strongly Agree
         h2 This is the second question
             br
-            select(required, name="scores")
+            select(required, name="q2")
                 //- option
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
@@ -29,7 +38,7 @@ block content
                 option(value=5) Strongly Agree
         h2 This is the third question
             br
-            select(required, name="scores")
+            select(required, name="q3")
                 //- option
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
@@ -38,7 +47,7 @@ block content
                 option(value=5) Strongly Agree
         h2 This is the fourth question
             br
-            select(required, name="scores")
+            select(required, name="q4")
                 //- option
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
@@ -47,7 +56,7 @@ block content
                 option(value=5) Strongly Agree
         h2 This is the fifth question
             br
-            select(required, name="scores")
+            select(required, name="q5")
                 //- option
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
@@ -56,7 +65,7 @@ block content
                 option(value=5) Strongly Agree
         h2 This is the sixth question
             br
-            select(required, name="scores")
+            select(required, name="q6")
                 //- option
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
@@ -65,7 +74,7 @@ block content
                 option(value=5) Strongly Agree
         h2 This is the seventh question
             br
-            select(required, name="scores")
+            select(required, name="q7")
                 //- option
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
@@ -74,7 +83,7 @@ block content
                 option(value=5) Strongly Agree
         h2 This is the eigth question
             br
-            select(required, name="scores")
+            select(required, name="q8")
                 //- option
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
@@ -83,7 +92,7 @@ block content
                 option(value=5) Strongly Agree
         h2 This is the ninth question
             br
-            select(required, name="scores")
+            select(required, name="q9")
                 //- option
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
@@ -92,14 +101,14 @@ block content
                 option(value=5) Strongly Agree
         h2 This is the tenth question
             br
-            select(required, name="scores")
+            select(required, name="q10")
                 //- option
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
                 option(value=3) Somewhere in the middle
                 option(value=4) Moderately Agree
                 option(value=5) Strongly Agree
-        button#submit(type='submit'  class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter") Find your match!  
+        button#submit(onclick="matchFunction()" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter") Find your match!  
         div#exampleModalCenter(class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
             div(class="modal-dialog modal-dialog-centered" role="document")
                 div(class="modal-content")
@@ -108,8 +117,33 @@ block content
                         button(type="button" class="close" data-dismiss="modal" aria-label="close")
                             span(aria-hidden="true") &times;
                     div(class="modal-body")
-                        img#matchPic(src="")
+                        img#matchPic(src=matchPic)
                     div(class="modal-footer w-100")
                         p#matchName(class="text-left w-100")
                         button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
-                    
+        script.
+            function matchFunction(e) {
+
+                var q1 = document.getElementsByName("q1")[0].value;
+                console.log(q1)
+                fetch("/api/friends", {
+                    method: "POST",
+                    body: JSON.stringify({
+                        scores: [q1]
+                    }),
+                    headers: {
+                        "Content-Type": "application/json",
+
+                            }
+                })
+                .then(function(res) {
+                    return res.json()
+                })
+                .then(function(res) {
+                    console.log(res)
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
+            }
+        //- script(type="text/javascript" src="app/routing/apiRoutes.js")                 

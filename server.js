@@ -17,14 +17,14 @@ app.set('view engine', 'pug');
 app.set('views', './app/views')
 
 const mainRoutes = require('./app/routing/htmlRoutes')
-const JSONRoutes = require('./app/routing/apiRoutes')
+const apiRoutes = require('./app/routing/apiRoutes')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(upload.array());
 app.use(express.static(path.join(__dirname)));
 app.use(mainRoutes);
-app.use('/api/friends', JSONRoutes)
+app.use('/api/friends', apiRoutes)
 
 app.listen(PORT, () => {
     console.log('The application is running on localhost:3000!')
