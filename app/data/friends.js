@@ -28,6 +28,8 @@ var friends =
 
 const handleFormSubmit = (event, formArray) => {
     event.preventDefault();
+    $("#matchPic").attr("src", friends[0].photo)
+    $("#matchName").text(friends[0].name)
 //serialize data function
 
     // var returnArray = {};

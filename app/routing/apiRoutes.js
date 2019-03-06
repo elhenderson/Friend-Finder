@@ -42,9 +42,10 @@ var matchIndex;
 
 
 
-// router.get('/', (req, res) => {
-//     return res.json(friends);
-// })
+router.get('/', (req, res) => {
+    res.json(friends);
+
+})
 
 router.post('/', (req, res) => {
     matchesArray = [];
@@ -65,7 +66,7 @@ router.post('/', (req, res) => {
     matchIndex = matchesArray.findIndex(isMatch);
     console.log(friends[matchIndex]);
     friends.push(newFriend);
-    // return res.json(friends);
+
 })
 
 //subtract the two numbers and get absolute values
