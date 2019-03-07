@@ -21,7 +21,7 @@ html(lang="en")
         h2 This is the first question
             br
             select(required, name="q1")
-                //- option
+                   
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
                 option(value=3) Somewhere in the middle
@@ -30,7 +30,7 @@ html(lang="en")
         h2 This is the second question
             br
             select(required, name="q2")
-                //- option
+            
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
                 option(value=3) Somewhere in the middle
@@ -39,7 +39,7 @@ html(lang="en")
         h2 This is the third question
             br
             select(required, name="q3")
-                //- option
+            
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
                 option(value=3) Somewhere in the middle
@@ -48,7 +48,7 @@ html(lang="en")
         h2 This is the fourth question
             br
             select(required, name="q4")
-                //- option
+            
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
                 option(value=3) Somewhere in the middle
@@ -57,7 +57,7 @@ html(lang="en")
         h2 This is the fifth question
             br
             select(required, name="q5")
-                //- option
+            
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
                 option(value=3) Somewhere in the middle
@@ -66,7 +66,7 @@ html(lang="en")
         h2 This is the sixth question
             br
             select(required, name="q6")
-                //- option
+            
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
                 option(value=3) Somewhere in the middle
@@ -75,7 +75,7 @@ html(lang="en")
         h2 This is the seventh question
             br
             select(required, name="q7")
-                //- option
+            
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
                 option(value=3) Somewhere in the middle
@@ -84,7 +84,7 @@ html(lang="en")
         h2 This is the eigth question
             br
             select(required, name="q8")
-                //- option
+            
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
                 option(value=3) Somewhere in the middle
@@ -93,7 +93,7 @@ html(lang="en")
         h2 This is the ninth question
             br
             select(required, name="q9")
-                //- option
+            
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
                 option(value=3) Somewhere in the middle
@@ -102,7 +102,7 @@ html(lang="en")
         h2 This is the tenth question
             br
             select(required, name="q10")
-                //- option
+                
                 option(value=1) Strongly Disagree
                 option(value=2) Moderately Disagree
                 option(value=3) Somewhere in the middle
@@ -126,15 +126,15 @@ html(lang="en")
             function matchFunction(e) {
 
                 var q1 = document.getElementsByName("q1")[0].value;
-                var q2 = document.getElementsByName("q1")[0].value;
-                var q3 = document.getElementsByName("q1")[0].value;
-                var q4 = document.getElementsByName("q1")[0].value;
-                var q5 = document.getElementsByName("q1")[0].value;
-                var q6 = document.getElementsByName("q1")[0].value;
-                var q7 = document.getElementsByName("q1")[0].value;
-                var q8 = document.getElementsByName("q1")[0].value;
-                var q9 = document.getElementsByName("q1")[0].value;
-                var q10 = document.getElementsByName("q1")[0].value;
+                var q2 = document.getElementsByName("q2")[0].value;
+                var q3 = document.getElementsByName("q3")[0].value;
+                var q4 = document.getElementsByName("q4")[0].value;
+                var q5 = document.getElementsByName("q5")[0].value;
+                var q6 = document.getElementsByName("q6")[0].value;
+                var q7 = document.getElementsByName("q7")[0].value;
+                var q8 = document.getElementsByName("q8")[0].value;
+                var q9 = document.getElementsByName("q9")[0].value;
+                var q10 = document.getElementsByName("q10")[0].value;
                 var name = document.getElementsByName("name")[0].value;
                 var photo = document.getElementsByName("photo")[0].value;
                 fetch("/api/friends", {

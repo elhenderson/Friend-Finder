@@ -63,6 +63,9 @@ router.post('/', (req, res) => {
             totalDifference += Math.abs(currentScore - friend.scores[index]);
         })
         matchesArray.push(totalDifference);
+        console.log(totalDifference);
+
+        totalDifference = 0;
         console.log(matchesArray)
     })
     var firstMatch = Math.min(...matchesArray)

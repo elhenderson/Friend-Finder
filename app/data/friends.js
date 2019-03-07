@@ -20,18 +20,18 @@ class Friends {
             },
             {
                 "name": "Spiderman",
-                "photo": "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Batman-BenAffleck.jpg/200px-Batman-BenAffleck.jpg",
+                "photo": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwidi6Sb4e7gAhVDbKwKHUG5Bh4QjRx6BAgBEAU&url=https%3A%2F%2Finsomniac.games%2Fgame%2Fspider-man-ps4%2F&psig=AOvVaw2AWtUfs-I5SKcXqTR3DFCV&ust=1552004433932125",
                 "scores": [
                     5,
-                    1,
                     5,
-                    3,
                     5,
-                    1,
-                    1,
-                    2,
-                    4,
-                    1
+                    5,
+                    5,
+                    5,
+                    5,
+                    5,
+                    5,
+                    5
                 ]
             }
         ]
