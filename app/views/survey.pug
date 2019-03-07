@@ -117,19 +117,30 @@ html(lang="en")
                         button(type="button" class="close" data-dismiss="modal" aria-label="close")
                             span(aria-hidden="true") &times;
                     div(class="modal-body")
-                        img#matchPic(src=matchPic)
+                        img#matchPic(src="")
                     div(class="modal-footer w-100")
                         p#matchName(class="text-left w-100")
                         button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
         script.
+
             function matchFunction(e) {
 
                 var q1 = document.getElementsByName("q1")[0].value;
-                console.log(q1)
+                var q2 = document.getElementsByName("q1")[0].value;
+                var q3 = document.getElementsByName("q1")[0].value;
+                var q4 = document.getElementsByName("q1")[0].value;
+                var q5 = document.getElementsByName("q1")[0].value;
+                var q6 = document.getElementsByName("q1")[0].value;
+                var q7 = document.getElementsByName("q1")[0].value;
+                var q8 = document.getElementsByName("q1")[0].value;
+                var q9 = document.getElementsByName("q1")[0].value;
+                var q10 = document.getElementsByName("q1")[0].value;
+                var name = document.getElementsByName("name")[0].value;
+                var photo = document.getElementsByName("photo")[0].value;
                 fetch("/api/friends", {
                     method: "POST",
                     body: JSON.stringify({
-                        scores: [q1]
+                        scores: [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
                     }),
                     headers: {
                         "Content-Type": "application/json",
@@ -140,7 +151,10 @@ html(lang="en")
                     return res.json()
                 })
                 .then(function(res) {
-                    console.log(res)
+                    console.log('Success:', JSON.stringify(res.photo))
+                    document.getElementById("matchPic").src = res.photo
+                    document.getElementById("matchName").innerText = res.name
+                    
                 })
                 .catch(function(error) {
                     console.log(error);

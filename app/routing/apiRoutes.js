@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom
-const dom = new JSDOM()
+// const jsdom = require("jsdom");
+// const { JSDOM } = jsdom
+// const dom = new JSDOM()
 require("../data/friends")
 let Friends = require("../data/friends")
 var friends = new Friends();
