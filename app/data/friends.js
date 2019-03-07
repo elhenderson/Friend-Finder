@@ -20,7 +20,7 @@ class Friends {
             },
             {
                 "name": "Spiderman",
-                "photo": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwidi6Sb4e7gAhVDbKwKHUG5Bh4QjRx6BAgBEAU&url=https%3A%2F%2Finsomniac.games%2Fgame%2Fspider-man-ps4%2F&psig=AOvVaw2AWtUfs-I5SKcXqTR3DFCV&ust=1552004433932125",
+                "photo": "https://insomniac.games/wp-content/uploads/2018/09/Spider-Man_PS4_Selfie_Photo_Mode_LEGAL.jpg",
                 "scores": [
                     5,
                     5,
@@ -35,6 +35,7 @@ class Friends {
                 ]
             }
         ]
+        
     }
 }
 
